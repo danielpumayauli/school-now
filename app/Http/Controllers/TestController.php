@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Course;
 
 class TestController extends Controller
 {
     public function welcome()
     {
-    	$a = 5;
-    	$b = 10;
-    	$c = $a + $b;
-    	return view('welcome');
+    	$courses = Course::all();
+    	return view('welcome')->with(compact('courses'));
     }
 }

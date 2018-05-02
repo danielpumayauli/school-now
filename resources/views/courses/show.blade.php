@@ -12,8 +12,8 @@
     <div class="content-center">
         <div class="container">
             <div class="motto">
-                <h1 class="title">You can learning all</h1>
-                <h3 class="description">Aprendizaje asíncrono</h3>
+                <h1 class="title">CURSO {{$course->name}}</h1>
+                <h3 class="description">{{$course->description}}</h3>
                 <br />
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-neutral btn-round"><i class="fa fa-play"></i>Watch video</a>
                 <button type="button" class="btn btn-outline-neutral btn-round">Download</button>
@@ -29,23 +29,22 @@
         <div class="container tim-container">
             <h2 class="title">Cursos Destacados</h2>
             <div class="row">
-                @foreach ($courses as $course)
                 <div class="col-md-4 col-sm-6">
 
                     <div class="card card-blog">
                         <div class="card-image">
                             <a href="#pablo">
-                                <img class="img" src="{{ $course->image }}">
+                                <img class="img" src="">
                             </a>
                         </div>
                         <div class="card-block ">
-                            <label class="label label-warning">{{ $course->name }}</label>
+                            <label class="label label-warning">xxx</label>
                             <h5 class="card-title">
                                 Currently at the San Francisco Museum of Modern Art
                             </h5>
                             <hr />
                             <div class="card-footer text-center">
-                                <a href="{{ url('/courses/'.$course->id ) }}" class="btn btn-primary btn-round">Comenzar</a>
+                                <a href="" class="btn btn-primary btn-round">Comenzar</a>
                                <!-- <div class="stats">
                                     <i class="nc-icon nc-hat-3" aria-hidden="true" style="color: red"></i>
                                 </div> -->
@@ -54,7 +53,6 @@
                     </div>
                     
                 </div>
-                @endforeach
                 <a href="#paper-kit" class="btn btn-danger btn-fill btn-round" style="margin:0 auto">Ver todos</a>
             </div>
         </div>
